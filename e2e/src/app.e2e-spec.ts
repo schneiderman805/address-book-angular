@@ -5,7 +5,10 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
+    page.navigateTo();
   });
+
+  
 
   it('should display welcome message', () => {
     page.navigateTo();
