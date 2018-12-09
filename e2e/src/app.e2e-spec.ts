@@ -5,18 +5,22 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
-    
+    page.navigateTo();
+
   });
+  
 
   
 
   it('should display create contact header', () => {
-    expect(page.getParagraphText()).toEqual('Create contact');
+    expect(page.getTitleText()).toEqual('Create contact');
   });
 
   it('should add a new contact', () => {
     let count = page.cardCount();
     expect(count).toBe(0);
+
+    
 
     page.getField('name').sendKeys('John Doe');
     page.getField('email').sendKeys('john@craftacademy.se');
